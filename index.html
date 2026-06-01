@@ -1,40 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pod Culture Vape Shop</title>
 
 <style>
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial,sans-serif;
+}
+
+body{
 background:#0b0b0b;
 color:white;
 }
 
 header{
 background:#000;
-padding:20px;
+padding:25px;
 text-align:center;
-border-bottom:2px solid red;
+border-bottom:3px solid #ff0000;
 }
 
-h1{
+.logo{
+font-size:34px;
+font-weight:bold;
 color:#ff2b2b;
-margin:0;
+}
+
+.tagline{
+color:#ccc;
+margin-top:5px;
 }
 
 .hero{
-padding:50px 20px;
+padding:80px 20px;
 text-align:center;
-background:linear-gradient(#200,#000);
+background:linear-gradient(to bottom,#220000,#000000);
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+color:#d0d0d0;
 }
 
 .btn{
 display:inline-block;
-padding:12px 25px;
-background:red;
+margin-top:25px;
+padding:14px 30px;
+background:#ff0000;
 color:white;
 text-decoration:none;
 border-radius:8px;
@@ -42,28 +65,81 @@ font-weight:bold;
 }
 
 .section{
-padding:30px 20px;
+padding:40px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:30px;
+color:#ff2b2b;
+font-size:30px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .card{
-background:#151515;
-padding:15px;
-margin-bottom:15px;
-border-radius:10px;
+background:#141414;
 border:1px solid #333;
+border-radius:12px;
+padding:20px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:#ff2b2b;
+}
+
+.card h3{
+margin-bottom:10px;
 }
 
 .price{
 color:#ff4040;
 font-weight:bold;
+font-size:20px;
+}
+
+.branch{
+line-height:1.7;
+}
+
+.contact{
+text-align:center;
+line-height:2;
 }
 
 footer{
 background:#000;
-padding:20px;
+padding:25px;
 text-align:center;
-margin-top:30px;
+margin-top:40px;
 border-top:1px solid #333;
+}
+
+.badge{
+display:inline-block;
+background:#ff0000;
+padding:6px 12px;
+border-radius:20px;
+font-size:12px;
+margin-bottom:15px;
+}
+
+.notice{
+background:#1a0000;
+border:1px solid #ff2b2b;
+padding:15px;
+border-radius:10px;
+margin-top:20px;
+text-align:center;
+color:#ffb0b0;
 }
 </style>
 </head>
@@ -71,76 +147,127 @@ border-top:1px solid #333;
 <body>
 
 <header>
-<h1>POD CULTURE</h1>
-<p>Elevate Taste. Elevate Lifestyle.</p>
+<div class="logo">POD CULTURE</div>
+<div class="tagline">Elevate Taste. Elevate Lifestyle.</div>
 </header>
 
 <section class="hero">
-<h2>Premium Vape Products</h2>
-<p>Authentic devices, disposables and flavors.</p>
+<div class="badge">PREMIUM VAPE PRODUCTS</div>
+
+<h1>Pod Culture Vape Shop</h1>
+
+<p>
+Authentic devices, disposables, pods and premium flavors.
+Visit any of our branches or order directly through Facebook.
+</p>
 
 <a class="btn"
-href="https://www.facebook.com/share/1JVRK4wNKj/?mibextid=wwXIfr">
-Order via Messenger
+href="https://www.facebook.com/share/1JVRK4wNKj/?mibextid=wwXIfr"
+target="_blank">
+Order via Facebook
 </a>
 </section>
 
 <section class="section">
-<h2>Our Branches</h2>
+<h2 class="section-title">Our Branches</h2>
 
-<div class="card">
-📍 Main Branch<br>
-Maharlika Highway, Brgy Abar 1st, San Jose City
+<div class="grid">
+
+<div class="card branch">
+<h3>📍 Main Branch</h3>
+Maharlika Highway<br>
+Brgy Abar 1st<br>
+San Jose City, Nueva Ecija<br>
+Infront of CO2 Paint Center
 </div>
 
-<div class="card">
-📍 2nd Branch<br>
-Brgy R. Rueda Sr, San Jose City
+<div class="card branch">
+<h3>📍 2nd Branch</h3>
+Brgy R. Rueda Sr.<br>
+San Jose City, Nueva Ecija<br>
+Beside Baliwag Terminal
 </div>
 
-<div class="card">
-📍 Rizal Branch<br>
-Aglipay Street, Poblacion Sur, Rizal, Nueva Ecija
+<div class="card branch">
+<h3>📍 Rizal Branch</h3>
+Aglipay Street<br>
+Poblacion Sur<br>
+Rizal, Nueva Ecija<br>
+Infront of Jollibee Rizal
+</div>
+
 </div>
 </section>
 
 <section class="section">
-<h2>Featured Products</h2>
+<h2 class="section-title">Featured Products</h2>
+
+<div class="grid">
 
 <div class="card">
-Neo Device
+<h3>X-Vape Neo</h3>
+<p>Modern design with LED display.</p>
+<br>
 <div class="price">₱1,850</div>
 </div>
 
 <div class="card">
-Aero Device
+<h3>X-Vape Aero</h3>
+<p>Compact design with airflow adjustment.</p>
+<br>
 <div class="price">₱1,850</div>
 </div>
 
 <div class="card">
-RELX Prime Pro
+<h3>RELX Prime Pro</h3>
+<p>Premium pod system.</p>
+<br>
 <div class="price">₱1,850</div>
 </div>
 
 <div class="card">
-XBlack Elite 30000
+<h3>XBlack Elite 30000</h3>
+<p>High puff disposable vape.</p>
+<br>
 <div class="price">₱850</div>
 </div>
 
 <div class="card">
-Nexlim Vagend
+<h3>Nexlim Vagend</h3>
+<p>Premium performance device.</p>
+<br>
 <div class="price">₱1,850</div>
 </div>
+
+</div>
+
+<div class="notice">
+⚠️ For adults only. Products contain nicotine. Not for minors.
+</div>
+
 </section>
 
 <section class="section">
-<h2>Contact Us</h2>
-<p>Facebook: Pod Culture VS</p>
-<p>Open Daily 8:00 AM - 9:00 PM</p>
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact">
+<p>📱 Facebook: Pod Culture VS</p>
+<p>🕗 Open Daily: 8:00 AM - 9:00 PM</p>
+<p>🚚 Available at all Pod Culture Branches</p>
+
+<br>
+
+<a class="btn"
+href="https://www.facebook.com/share/1JVRK4wNKj/?mibextid=wwXIfr"
+target="_blank">
+Message Us Now
+</a>
+</div>
+
 </section>
 
 <footer>
-© 2026 Pod Culture Vape Shop
+© 2026 Pod Culture Vape Shop | All Rights Reserved
 </footer>
 
 </body>
