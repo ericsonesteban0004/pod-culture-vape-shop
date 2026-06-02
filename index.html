@@ -4,7 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pod Culture Vape Shop</title>
+.search-bar{
+position:sticky;
+top:0;
+z-index:999;
+background:#111;
+padding:10px;
+border-bottom:1px solid #ff3333;
+}
 
+.search-bar input{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#222;
+color:white;
+font-size:16px;
+outline:none;
+}
 <style>
   .messenger-btn{
 position:fixed;
@@ -275,6 +293,13 @@ border:1px solid rgba(255,255,255,.15);
 ">
  AVAILABLE AT ALL 3 POD CULTURE BRANCHES 
 </div>  
+ <div class="search-bar">
+<input
+type="text"
+id="productSearch"
+placeholder="🔍 Search products, flavors, colors..."
+onkeyup="searchProducts()">
+</div> 
 <h2 class="section-title">Disposable Pods</h2>
 
 <div class="grid">
@@ -481,5 +506,26 @@ Message Us Now
 class="messenger-btn">
 💬
 </a>
+ <script>
+
+function searchProducts(){
+
+let input=document.getElementById("productSearch").value.toLowerCase();
+
+let cards=document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+
+if(card.innerText.toLowerCase().includes(input)){
+card.style.display="block";
+}else{
+card.style.display="none";
+}
+
+});
+
+}
+
+</script> 
 </body>
 </html>
