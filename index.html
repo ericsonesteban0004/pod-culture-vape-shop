@@ -245,11 +245,19 @@ Infront of Jollibee Rizal
 <h3>XBlack Elite 30K PUFFS</h3>
 <p>Premium disposable vape.</p>
 <div class="price">₱350</div>
-  <button onclick="document.getElementById('xblackflavors').style.display='block'"
+  <button onclick="
+var x=document.getElementById('xblackflavors');
+if(x.style.display==='none'){
+    x.style.display='block';
+    this.innerHTML='Hide Flavors 🔥';
+}else{
+    x.style.display='none';
+    this.innerHTML='View Flavors 🔥';
+}
+"
 style="background:#ff3333;color:white;border:none;padding:10px 15px;border-radius:8px;cursor:pointer;margin-top:10px;font-weight:bold;">
 View Flavors 🔥
 </button>
-
 <div id="xblackflavors" style="display:none;margin-top:15px;line-height:1.8;">
 🍓 Very Baguio - Strawberry<br>
 🍵 Green Tokyo - Matcha<br>
