@@ -214,11 +214,13 @@ Order via Facebook
 
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px;">
 
-<img src="https://i.ibb.co/WvSq5LT7/91012-F0-E-13-B6-470-A-A55-D-E52-A7-F3-E0189.png"
-style="width:100%;height:180px;object-fit:cover;border-radius:10px;">
+<img src="https://raw.githubusercontent.com/ericsonesteban0004/pod-culture-vape-shop/main/images/e28e4f2f-4fe3-4d5c-b455-160d7743b644.jpg"
+style="width:100%;height:180px;object-fit:cover;border-radius:10px;cursor:pointer;"
+onclick="openGallery(mainBranchImages,0)">
 
-<img src="https://i.ibb.co/wZVQWHqt/AF05-D398-A5-A0-462-D-904-E-FC24850-D47-A8.png"
-style="width:100%;height:180px;object-fit:cover;border-radius:10px;">
+<img src="https://raw.githubusercontent.com/ericsonesteban0004/pod-culture-vape-shop/main/images/972e886c-43ca-4db9-b155-5267b2c49f46.jpg"
+style="width:100%;height:180px;object-fit:cover;border-radius:10px;cursor:pointer;"
+onclick="openGallery(mainBranchImages,1)">
 
 </div>
 
@@ -1036,5 +1038,45 @@ card.style.display="none";
 }
 
 </script> 
+  <script>
+const mainBranchImages = [
+'https://raw.githubusercontent.com/ericsonesteban0004/pod-culture-vape-shop/main/images/e28e4f2f-4fe3-4d5c-b455-160d7743b644.jpg',
+'https://raw.githubusercontent.com/ericsonesteban0004/pod-culture-vape-shop/main/images/972e886c-43ca-4db9-b155-5267b2c49f46.jpg'
+];
+</script>
+  <div id="imageModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.95);justify-content:center;align-items:center;z-index:9999;">
+
+<button onclick="prevImage()" style="position:absolute;left:15px;font-size:30px;background:none;border:none;color:white;">◀</button>
+
+<img id="modalImg" src="" style="max-width:95%;max-height:90%;object-fit:contain;">
+
+<button onclick="nextImage()" style="position:absolute;right:15px;font-size:30px;background:none;border:none;color:white;">▶</button>
+
+<button onclick="document.getElementById('imageModal').style.display='none'"
+style="position:absolute;top:20px;right:20px;font-size:30px;background:none;border:none;color:white;">✕</button>
+
+</div>
+
+<script>
+let galleryImages = [];
+let currentImage = 0;
+
+function openGallery(images,index){
+    galleryImages = images;
+    currentImage = index;
+    document.getElementById('modalImg').src = galleryImages[currentImage];
+    document.getElementById('imageModal').style.display='flex';
+}
+
+function nextImage(){
+    currentImage = (currentImage + 1) % galleryImages.length;
+    document.getElementById('modalImg').src = galleryImages[currentImage];
+}
+
+function prevImage(){
+    currentImage = (currentImage - 1 + galleryImages.length) % galleryImages.length;
+    document.getElementById('modalImg').src = galleryImages[currentImage];
+}
+</script>
 </body>
 </html>
