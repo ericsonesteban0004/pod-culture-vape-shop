@@ -975,46 +975,44 @@ View Colors 🎨
 🏜️ Dune<br>
 🍓 Frozen Berry
 </div>
-  
+
 </div>
 <div class="card">
-<img src="https://raw.githubusercontent.com/ericsonesteban0004/pod-culture-vape-shop/main/images/ChatGPT%20Image%20Jun%203,%202026,%2004_18_47%20PM.png"
+  <img src="https://raw.githubusercontent.com/ericsonesteban0004/pod-culture-vape-shop/main/images/ChatGPT%20Image%20Jun%203%2C%202026%2C%2008_15_29%20PM.png"
 style="width:100%;height:260px;object-fit:contain;background:#111;border-radius:10px;padding:10px;cursor:pointer;"
 onclick="document.getElementById('modalImg').src=this.src;document.getElementById('imageModal').style.display='flex';">
-<h3>Nexlim Vagend</h3>
-<p>Premium performance device.</p>
-<br>
-<div class="price">₱1,850</div>
-</div>
-
-</div>
-<div class="card">
- <img src="https://raw.githubusercontent.com/ericsonesteban0004/pod-culture-vape-shop/main/images/ChatGPT%20Image%20Jun%203%2C%202026%2C%2008_15_29%20PM.png"
-alt="KRONOS Powered by NEXYS"
-style="cursor:pointer;"
-onclick="document.getElementById('modalImg').src=this.src;document.getElementById('imageModal').style.display='flex';">
-
-  <h3>KRONOS Powered by NEXYS</h3>
-
-  <p style="color:#ff4444;font-weight:bold;font-size:18px;">
-    ₱1,100
-  </p>
-
-  <p>
+  
+<h3>KRONOS Powered by NEXYS</h3>
+<p>
     NEXT LEVEL EXPERIENCE<br>
     2ml Refillable Device
   </p>
 
-  <strong>Available Colors:</strong>
-  <ul style="margin-top:10px;padding-left:20px;">
-    <li>Black</li>
+<div class="price">₱1,100</div>
+  <button onclick="
+var x=document.getElementById('relxcolors');
+if(x.style.display==='none'){
+    x.style.display='block';
+    this.innerHTML='Hide Colors 🎨';
+}else{
+    x.style.display='none';
+    this.innerHTML='View Colors 🎨';
+}
+"
+style="background:#ff3333;color:white;border:none;padding:10px 15px;border-radius:8px;cursor:pointer;margin-top:10px;font-weight:bold;">
+View Colors 🎨
+</button>
+
+<div id="kronos colors  " style="display:none;margin-top:15px;line-height:1.8;">
+<li>Black</li>
     <li>Silver</li>
     <li>Bronze</li>
     <li>Rose Gold</li>
     <li>Champagne Gold</li>
   </ul>
 </div>
-  
+
+  </div>
 <div class="notice">
 ⚠️ For adults only. Products contain nicotine. Not for minors.
 </div>
