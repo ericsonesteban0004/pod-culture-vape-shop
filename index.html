@@ -1535,6 +1535,49 @@ View Flavors 🍓
 </div>
 
 </div>
+  <div class="card">
+
+<img src="https://raw.githubusercontent.com/ericsonesteban0004/pod-culture-vape-shop/main/images/ChatGPT%20Image%20Jun%204%2C%202026%2C%2004_50_30%20PM.png"
+style="width:100%;height:260px;object-fit:contain;background:#111;border-radius:10px;padding:10px;cursor:pointer;"
+onclick="document.getElementById('modalImg').src=this.src;document.getElementById('imageModal').style.display='flex';">
+
+<h3>Mix & Matcha</h3>
+<p style="color:#ff4444;font-weight:bold;font-size:18px;">
+₱300
+</p>
+
+<p>
+50PV / 50PG Ratio<br>
+Premium Pod Formula<br>
+30ML<br>
+Iced Pastry
+</p>
+
+<button onclick="
+var x=document.getElementById('mixmatchaflavors');
+if(x.style.display==='none'){
+    x.style.display='block';
+    this.innerHTML='Hide Flavors 🎨';
+}else{
+    x.style.display='none';
+    this.innerHTML='View Flavors 🎨';
+}
+"
+style="background:#ff3333;color:white;border:none;padding:10px 15px;border-radius:8px;cursor:pointer;margin-top:10px;font-weight:bold;">
+View Flavors 🎨
+</button>
+
+<div id="mixmatchaflavors" style="display:none;margin-top:15px;line-height:1.8;">
+🍵 Matcha Ice<br>
+🍪 Oreo Matcha<br>
+💜 Matcha Ube<br>
+🥤 Matcha Shake<br>
+☕ Matcha Latte<br>
+🍰 Matcha Cheesecake<br>
+🍓 Strawberry Matcha
+</div>
+
+</div>
 <div class="notice">
 ⚠️ For adults only. Products contain nicotine. Not for minors.
 </div>
