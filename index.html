@@ -193,6 +193,15 @@ color:#ffb0b0;
 .promo-slide.active{
     display:block;
 }
+  @keyframes glow{
+    from{
+        box-shadow:0 0 10px rgba(255,0,0,.5);
+    }
+    to{
+        box-shadow:0 0 25px rgba(255,102,0,.9);
+    }
+}
+
 </style>
 </head>
 
@@ -209,12 +218,12 @@ color:#ffb0b0;
 <section class="hero">
   <div class="promo-slider">
     <div class="promo-slide active">
-        🔥 PROMO DEAL #1<br>
-        2 PCS FOR ₱500
+        🔥 LIMITED PROMO<br>
+        BUY 2 FOR 500
     </div>
 
     <div class="promo-slide">
-        💨 SINGLE DEVICE<br>
+        💨 SINGLE POD<br>
         ₱300 ONLY
     </div>
 
@@ -323,7 +332,8 @@ Infront of Jollibee Rizal<br><br>
 
 <section class="section">
 <div style="
-background:linear-gradient(135deg,#ff3333,#cc0000);
+background:linear-gradient(90deg,#ff0000,#ff6600);
+animation: glow 2s infinite alternate;
 color:white;
 text-align:center;
 padding:12px;
