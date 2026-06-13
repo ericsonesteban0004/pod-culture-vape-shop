@@ -1491,39 +1491,48 @@ View Colors 🎨
 </div>
 
 </div>
-  <div class="card">
+  <div class="product-card">
 
-<img src="https://raw.githubusercontent.com/ericsonesteban0004/pod-culture-vape-shop/main/images/ChatGPT%20Image%20Jun%2014%2C%202026%2C%2003_16_10%20AM.png"
-style="width:100%;height:260px;object-fit:contain;background:#111;border-radius:10px;padding:10px;cursor:pointer;"
-onclick="document.getElementById('modalImg').src=this.src;document.getElementById('imageModal').style.display='flex';">
+    <img
+        src="https://raw.githubusercontent.com/ericsonesteban0004/pod-culture-vape-shop/main/images/ChatGPT%20Image%20Jun%2014%2C%202026%2C%2003_16_10%20AM.png"
+        alt="VOOM x OZAWA KIT"
+        style="width:100%;height:220px;object-fit:contain;background:#111;border-radius:10px;padding:10px;box-sizing:border-box;cursor:pointer;"
+        onclick="document.getElementById('modalImg').src=this.src;document.getElementById('imageModal').style.display='flex';"
+    >
 
-<h3>VOOM X OZAWA KIT (WITH JUICE)</h3>
-<p>COMPATIBLE TO XLIM CARTRIDGE</p>
+    <div class="product-info">
+        <h3>VOOM x OZAWA KIT</h3>
 
-<div class="price">₱750</div>
+        <p style="color:#00ff99;font-weight:bold;">
+            🎁 WITH FREE JUICE
+        </p>
 
-<button onclick="
-var x=document.getElementById('xnexuscolors');
-if(x.style.display==='none'){
-    x.style.display='block';
-    this.innerHTML='Hide Colors 🎨';
-}else{
-    x.style.display='none';
-    this.innerHTML='View Colors 🎨';
-}
-"
-style="background:#ff3333;color:white;border:none;padding:10px 15px;border-radius:8px;cursor:pointer;margin-top:10px;font-weight:bold;">
-View Colors 🎨
-</button>
+        <p>Compatible with any XLIM cartridge.</p>
 
-<div id="ozawaColors" style="display:none;margin-top:15px;line-height:1.8;">
+        <div class="price">₱750</div>
 
-VIOLET<br>
-PINK<br>
-GREEN<br>
-BLUE<br>
-ORANGE<br>
-BLACK<br>
+        <button onclick="toggleColors()">
+            Show Colors 🎨
+        </button>
+
+        <div id="ozawaColors" style="display:none;margin-top:15px;">
+            🟣 Violet<br>
+            🩷 Pink<br>
+            🟢 Green<br>
+            🔵 Blue<br>
+            🟠 Orange<br>
+            ⚫ Black
+        </div>
+
+</div>
+
+<!-- IMAGE MODAL -->
+<div id="imageModal"
+     style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.9);justify-content:center;align-items:center;z-index:9999;"
+     onclick="this.style.display='none'">
+
+    <img id="modalImg"
+         style="max-width:90%;max-height:90%;object-fit:contain;">
 </div>
     
 </div>
